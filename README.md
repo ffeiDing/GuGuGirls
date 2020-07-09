@@ -73,7 +73,7 @@ rank1 |rank5|rank10|mAP
 
 
 ### Video Demo
-[![Demo](https://img.youtube.com/vi/P6jEzzwoYWs/0.jpg)](https://www.youtube.com/watch?v=P6jEzzwoYWs)
+[![Demo](demo.mov)
 
 
 
