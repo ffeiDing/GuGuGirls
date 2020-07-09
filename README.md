@@ -71,13 +71,6 @@ The results on `MTCNN_align_600id` are:
 	ACC|99.24%|99.20%|**99.30%**|99.27%|99.13%
 
 
-	```
-    Finally we have the `sphereface_model.caffemodel`, extracted features `pairs.mat` in folder **`result/`**, and accuracy on LFW like this:
-
-	fold|1|2|3|4|5|6|7|8|9|10|AVE
-	:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-	ACC|99.33%|99.17%|98.83%|99.50%|99.17%|99.83%|99.17%|98.83%|99.83%|99.33%|99.30%
-
 ### Models
 1. Visualizations of network architecture (tools from [ethereon](http://ethereon.github.io/netscope/quickstart.html)):
 	- SphereFace-20: [link](http://ethereon.github.io/netscope/#/gist/20f6ddf70a35dec5019a539a502bccc5)
@@ -104,18 +97,6 @@ The results on `MTCNN_align_600id` are:
 
 Please click the image to watch the Youtube video. For Youku users, click [here](http://t.cn/RCZ0w1c).
 
-Details:
-1. It is an **open-set** face recognition scenario. The video is processed frame by frame, following the same pipeline in this repository.
-2. Gallery set consists of 6 identities. Each main character has only 1 gallery face image. All the detected faces are included in probe set.
-3. There is no overlap between gallery set and training set (CASIA-WebFace).
-4. The scores between each probe face and gallery set are computed by cosine similarity. If the maximal score of a probe face is smaller than a pre-definded threshold, the probe face would be considered as an outlier.
-5. Main characters are labeled by boxes with different colors. (
-![#ff0000](https://placehold.it/15/ff0000/000000?text=+)Rachel,
-![#ffff00](https://placehold.it/15/ffff00/000000?text=+)Monica,
-![#ff80ff](https://placehold.it/15/ff80ff/000000?text=+)Phoebe,
-![#00ffff](https://placehold.it/15/00ffff/000000?text=+)Joey,
-![#0000ff](https://placehold.it/15/0000ff/000000?text=+)Chandler,
-![#00ff00](https://placehold.it/15/00ff00/000000?text=+)Ross)
 
 
 
