@@ -73,9 +73,8 @@ rank1 |rank5|rank10|mAP
 
 
 ### Video Demo
-[![SphereFace Demo](https://img.youtube.com/vi/P6jEzzwoYWs/0.jpg)](https://www.youtube.com/watch?v=P6jEzzwoYWs)
+[![Demo](https://img.youtube.com/vi/P6jEzzwoYWs/0.jpg)](https://www.youtube.com/watch?v=P6jEzzwoYWs)
 
-Please click the image to watch the Youtube video. For Youku users, click [here](http://t.cn/RCZ0w1c).
 
 
 
