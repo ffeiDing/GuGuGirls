@@ -8,12 +8,12 @@ The test dataset MTCNN_600_id is our private dataset and should not be released.
 
 
 ### Contents
-0. [Mased Face Generation](#Mased Face Generation)
-0. [Mased Face Recognition](#Mased Face Recognition)
+0. [Masked Face Generation](#masked-face-generation)
+0. [Masked Face Recognition](#masked-face-recognition)
 0. [Video Demo](#video-demo)
 
 
-### Mased Face Generation
+### Masked Face Generation
 
 #### Step 1: Data Preparation
 Download the training set (`CASIA-WebFace`). Detect faces and facial landmarks in CAISA-WebFace using `MTCNN`. Align faces to a canonical pose using similarity transformation. (see: [MTCNN - face detection & alignment](https://github.com/kpzhang93/MTCNN_face_detection_alignment)). 
@@ -25,17 +25,13 @@ Download the Dlib model from [Google Drive](https://drive.google.com/file/d/16Zv
 #### Part 3: Generate Masked faces
 **Note:** In this part, we assume you are in the directory **`$GuGuGirls/MaskGeneration/`**
 Change the paths in generate_mask.py and run it.
-	```Shell&Matlab
-	python3 generate_mask.py
-	```
-
-
-2. Train the sphereface model.
 
 	```Shell
-	./code/sphereface_train.sh 0,1
+	python3 generate_mask.py
 	```
-    After training, a model `sphereface_model_iter_28000.caffemodel` and a corresponding log file `sphereface_train.log` are placed in the directory of `result/sphereface/`.
+We get masked faces based on WebFace.
+
+
 
 #### Part 3: Test
 **Note:** In this part, we assume you are in the directory **`$SPHEREFACE_ROOT/test/`**
