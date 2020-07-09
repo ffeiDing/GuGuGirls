@@ -38,21 +38,21 @@ Change the paths in generate_mask.py and run it. TWe get masked faces based on W
 We combine original images without masks with our generated masked faces as training data.
 Change the paths of datasets and run:
 
-	```Shell
+	```
 	python3 script/dataset/transform.py
 	```
 
 The test data is our private `MTCNN_align_600id`. You can download from [Google Drive](https://drive.google.com/drive/folders/1e5AHQ7qNPZZ6QldWfs-cfYJyj7mkQ4JM?usp=sharing). 
 Change the paths of datasets and run:
 
-	```Shell
+	```
 	python3 script/dataset/transform_test.py
 	```
 
 #### Step 2: Training
 Change the paths in the file and run:
 	
-	```Shell
+	```
 	python3 script/experiment/train.py
 	```
 You can download the pretrained model from [Google Drive](https://drive.google.com/file/d/1BNDbwM_SS9GX7g2kSaStllN8it8FRtJt/view?usp=sharing). 
@@ -60,7 +60,7 @@ You can download the pretrained model from [Google Drive](https://drive.google.c
 #### Step 3: Test
 Change the paths in the file and run:
 	
-	```Shell
+	```
 	python3 script/experiment/test.py
 	```
 
