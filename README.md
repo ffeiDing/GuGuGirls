@@ -19,7 +19,8 @@ The test dataset MTCNN_600_id is our private dataset and should not be released.
 Download the training set (`CASIA-WebFace`). Detect faces and facial landmarks in CAISA-WebFace using `MTCNN`. Align faces to a canonical pose using similarity transformation. (see: [MTCNN - face detection & alignment](https://github.com/kpzhang93/MTCNN_face_detection_alignment)). 
 
 #### Part 2: Model Preparation
-Download the Dlib model from 
+Download the Dlib model from [Google Drive]https://drive.google.com/file/d/16Zv5y2MJUShO6xNE_hV45WdzN-zesMJ5/view?usp=sharing and put it in the directory **`$GuGuGirls/MaskGeneration/models/`**
+
 
 #### Part 3: Generate Masked faces
 **Note:** In this part, we assume you are in the directory **`$GuGuGirls/MaskGeneration/`**
