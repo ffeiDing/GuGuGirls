@@ -65,11 +65,11 @@ python3 script/experiment/test.py
 ```
 
 The results on `MTCNN_align_600id` are:
-```
-fold|1|2|3|4|5|6|7|8|9|10|AVE
-:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-ACC|99.33%|99.17%|98.83%|99.50%|99.17%|99.83%|99.17%|98.83%|99.83%|99.33%|99.30%
-```
+
+	Experiment |#1|#2|#3 (released)|#4|#5
+	:---:|:---:|:---:|:---:|:---:|:---:
+	ACC|99.24%|99.20%|**99.30%**|99.27%|99.13%
+
 
 	```
     Finally we have the `sphereface_model.caffemodel`, extracted features `pairs.mat` in folder **`result/`**, and accuracy on LFW like this:
