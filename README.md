@@ -73,7 +73,8 @@ rank1 |rank5|rank10|mAP
 
 
 ### Video Demo
-[![Demo](demo.mov)]
+[Demo](demo.mov)
+We use google [colab](https://colab.research.google.com/drive/1esy30GNED8aHe7NWjE2GHZUT-wkUMHw5?usp=sharing) to show our demo. You can download [GuGuGirls](https://drive.google.com/drive/folders/16SdaTUtBLBU7arjZ_qem0SeW232hGi4I?usp=sharing) and [MTCNN_align_600id](https://drive.google.com/drive/folders/1e5AHQ7qNPZZ6QldWfs-cfYJyj7mkQ4JM?usp=sharing) to your own google drive. Follow the instructions in our colab to test our pretrained model interactively!
 
 
 
