@@ -73,7 +73,7 @@ rank1 |rank5|rank10|mAP
 
 
 ### Video Demo
-[![Demo]](demo.mov)
+[![Demo](demo.mov)]
 
 
 
