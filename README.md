@@ -26,9 +26,9 @@ Download the Dlib model from [Google Drive](https://drive.google.com/file/d/16Zv
 **Note:** In this step, we assume you are in the directory **`$GuGuGirls/MaskGeneration/`**
 Change the paths in generate_mask.py and run it. TWe get masked faces based on WebFace.
 
-	```Shell
-	python3 generate_mask.py
-	``` 
+```Shell
+python3 generate_mask.py
+``` 
 	
 
 ### Masked Face Recognition
