@@ -22,7 +22,7 @@ Download the training set (`CASIA-WebFace`). Detect faces and facial landmarks i
 Download the Dlib model from [Google Drive](https://drive.google.com/file/d/16Zv5y2MJUShO6xNE_hV45WdzN-zesMJ5/view?usp=sharing) and put it in the directory **`$GuGuGirls/MaskGeneration/models/`**
 
 
-#### Step 3: Generate Masked faces
+#### Step 3: Generate Masked Faces
 **Note:** In this step, we assume you are in the directory **`$GuGuGirls/MaskGeneration/`**
 Change the paths in generate_mask.py and run it. TWe get masked faces based on WebFace.
 
@@ -38,37 +38,38 @@ python3 generate_mask.py
 We combine original images without masks with our generated masked faces as training data.
 Change the paths of datasets and run:
 
-	```
-	python3 script/dataset/transform.py
-	```
+```Shell
+python3 script/dataset/transform.py
+```
 
 The test data is our private `MTCNN_align_600id`. You can download from [Google Drive](https://drive.google.com/drive/folders/1e5AHQ7qNPZZ6QldWfs-cfYJyj7mkQ4JM?usp=sharing). 
 Change the paths of datasets and run:
 
-	```
-	python3 script/dataset/transform_test.py
-	```
+```Shell
+python3 script/dataset/transform_test.py
+```
 
 #### Step 2: Training
 Change the paths in the file and run:
 	
-	```
-	python3 script/experiment/train.py
-	```
+```Shell
+python3 script/experiment/train.py
+```
 You can download the pretrained model from [Google Drive](https://drive.google.com/file/d/1BNDbwM_SS9GX7g2kSaStllN8it8FRtJt/view?usp=sharing). 
 
 #### Step 3: Test
 Change the paths in the file and run:
 	
-	```
-	python3 script/experiment/test.py
-	```
+```Shell
+python3 script/experiment/test.py
+```
 
 The results on `MTCNN_align_600id` are:
-	fold|1|2|3|4|5|6|7|8|9|10|AVE
-	:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-	ACC|99.33%|99.17%|98.83%|99.50%|99.17%|99.83%|99.17%|98.83%|99.83%|99.33%|99.30%
-
+```
+fold|1|2|3|4|5|6|7|8|9|10|AVE
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+ACC|99.33%|99.17%|98.83%|99.50%|99.17%|99.83%|99.17%|98.83%|99.83%|99.33%|99.30%
+```
 
 	```
     Finally we have the `sphereface_model.caffemodel`, extracted features `pairs.mat` in folder **`result/`**, and accuracy on LFW like this:
