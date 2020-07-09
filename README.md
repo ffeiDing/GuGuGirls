@@ -66,29 +66,9 @@ python3 script/experiment/test.py
 
 The results on `MTCNN_align_600id` are:
 
-	Experiment |#1|#2|#3 (released)|#4|#5
-	:---:|:---:|:---:|:---:|:---:|:---:
-	ACC|99.24%|99.20%|**99.30%**|99.27%|99.13%
-
-
-### Models
-1. Visualizations of network architecture (tools from [ethereon](http://ethereon.github.io/netscope/quickstart.html)):
-	- SphereFace-20: [link](http://ethereon.github.io/netscope/#/gist/20f6ddf70a35dec5019a539a502bccc5)
-2. Model file
-	- SphereFace-20: [Google Drive](https://drive.google.com/open?id=0B_geeR2lTMegb2F6dmlmOXhWaVk) | [Baidu](http://pan.baidu.com/s/1qY5FTF2)
-	- Third-party SphereFace-4 & SphereFace-6: [here](https://github.com/wy1iu/sphereface/issues/81) by [zuoqing1988](https://github.com/zuoqing1988)
-
-
-### Results
-1. Following the instruction, we go through the entire pipeline for 5 times. The accuracies on LFW are shown below. Generally, we report the average but we release the [model-3](#models) here.
-
-	Experiment |#1|#2|#3 (released)|#4|#5
-	:---:|:---:|:---:|:---:|:---:|:---:
-	ACC|99.24%|99.20%|**99.30%**|99.27%|99.13%
-
-2. Other intermediate results:
-    - LFW features: [Google Drive](https://drive.google.com/open?id=0B_geeR2lTMegenU0cGJYZmlRUlU) | [Baidu](http://pan.baidu.com/s/1o8QIMUY)
-    - Training log: [Google Drive](https://drive.google.com/open?id=0B_geeR2lTMegcWkxdVV4X1FOaFU) | [Baidu](http://pan.baidu.com/s/1i5QmXrJ)
+rank1 |rank5|rank10|mAP
+:---:|:---:|:---:|:---:
+85.39%|92.54%|94.21%|45.61%
 
 
 
