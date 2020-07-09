@@ -36,14 +36,14 @@ python3 generate_mask.py
 
 #### Step 1: Data Preparation
 We combine original images without masks with our generated masked faces as training data.
-Change the paths of datasets and run:
+Change paths to the datasets and run:
 
 ```Shell
 python3 script/dataset/transform.py
 ```
 
 The test data is our private `MTCNN_align_600id`. You can download from [Google Drive](https://drive.google.com/drive/folders/1e5AHQ7qNPZZ6QldWfs-cfYJyj7mkQ4JM?usp=sharing). 
-Change the paths of datasets and run:
+Change path to the dataset and run:
 
 ```Shell
 python3 script/dataset/transform_test.py
