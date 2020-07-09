@@ -1,54 +1,75 @@
-# *GuGuGirls*: Masked Face Generation and Recognition
+# *GuGuGirls*: Masked Face Recognition with Mask Generation
 
 By Feifei Ding, Xiaoyu Wang and Kejing Yang
 
 ### Privacy
 
-The test dataset MTCNN_600_id is our private dataset and should not be released.
+The test dataset `MTCNN_align_600id` is our private dataset and should not be released. It can only be used in our project.
 
 
 ### Contents
-0. [Masked Face Generation](#masked-face-generation)
+0. [Mask Generation](#mask-generation)
 0. [Masked Face Recognition](#masked-face-recognition)
 0. [Video Demo](#video-demo)
 
 
-### Masked Face Generation
+### Mask Generation
 
 #### Step 1: Data Preparation
 Download the training set (`CASIA-WebFace`). Detect faces and facial landmarks in CAISA-WebFace using `MTCNN`. Align faces to a canonical pose using similarity transformation. (see: [MTCNN - face detection & alignment](https://github.com/kpzhang93/MTCNN_face_detection_alignment)). 
 
-#### Part 2: Model Preparation
+#### Step 2: Model Preparation
 Download the Dlib model from [Google Drive](https://drive.google.com/file/d/16Zv5y2MJUShO6xNE_hV45WdzN-zesMJ5/view?usp=sharing) and put it in the directory **`$GuGuGirls/MaskGeneration/models/`**
 
 
-#### Part 3: Generate Masked faces
-**Note:** In this part, we assume you are in the directory **`$GuGuGirls/MaskGeneration/`**
-Change the paths in generate_mask.py and run it.
+#### Step 3: Generate Masked faces
+**Note:** In this step, we assume you are in the directory **`$GuGuGirls/MaskGeneration/`**
+Change the paths in generate_mask.py and run it. TWe get masked faces based on WebFace.
 
 	```Shell
 	python3 generate_mask.py
-	```
-We get masked faces based on WebFace.
+	``` 
+	
 
+### Masked Face Recognition
+**Note:** In this part, we assume you are in the directory **`$GuGuGirls/FaceRecognition/`**
 
-
-#### Part 3: Test
-**Note:** In this part, we assume you are in the directory **`$SPHEREFACE_ROOT/test/`**
-
-1. Get the pair list of LFW ([view 2](http://vis-www.cs.umass.edu/lfw/#views)).
+#### Step 1: Data Preparation
+We combine original images without masks with our generated masked faces as training data.
+Change the paths of datasets and run:
 
 	```Shell
-	mv ../preprocess/result/lfw-112X96 data/
-	./code/get_pairs.sh
+	python3 script/dataset/transform.py
 	```
-	Make sure that the LFW dataset and`pairs.txt` in the directory of **`data/`**
 
-1. Extract deep features and test on LFW.
+The test data is our private `MTCNN_align_600id`. You can download from [Google Drive](https://drive.google.com/drive/folders/1e5AHQ7qNPZZ6QldWfs-cfYJyj7mkQ4JM?usp=sharing). 
+Change the paths of datasets and run:
 
-	```Matlab
-	# In Matlab Command Window
-	run code/evaluation.m
+	```Shell
+	python3 script/dataset/transform_test.py
+	```
+
+#### Step 2: Training
+Change the paths in the file and run:
+	
+	```Shell
+	python3 script/experiment/train.py
+	```
+You can download the pretrained model from [Google Drive](https://drive.google.com/file/d/1BNDbwM_SS9GX7g2kSaStllN8it8FRtJt/view?usp=sharing). 
+
+#### Step 3: Test
+Change the paths in the file and run:
+	
+	```Shell
+	python3 script/experiment/test.py
+	```
+
+The results on `MTCNN_align_600id` are:
+	fold|1|2|3|4|5|6|7|8|9|10|AVE
+	:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+	ACC|99.33%|99.17%|98.83%|99.50%|99.17%|99.83%|99.17%|98.83%|99.83%|99.33%|99.30%
+
+
 	```
     Finally we have the `sphereface_model.caffemodel`, extracted features `pairs.mat` in folder **`result/`**, and accuracy on LFW like this:
 
