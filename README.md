@@ -1,4 +1,4 @@
-# *GuGuGirls*: Masked Face Recognition with Mask Generation
+# *GuGuGirls*: Masked Face Recognition
 
 By Feifei Ding, Xiaoyu Wang and Kejing Yang
 
