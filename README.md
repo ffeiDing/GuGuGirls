@@ -4,7 +4,7 @@ By Feifei Ding, Xiaoyu Wang and Kejing Yang
 
 ### Privacy
 
-The test dataset `MTCNN_align_600id` is our private dataset and should not be released. It can only be used in our project.
+The test dataset `MTCNN_align_600id` is our private dataset and should not be . It can only be used in our project.
 
 
 ### Contents
